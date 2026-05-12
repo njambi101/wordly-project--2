@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects in JavaScript</title>
+</head>
+<body>
+<script>
+    // JavaScript code for objects
+
+person = {
+    name: "John",
+    age: 30,
+    city: "New York",
+    fun: function(){
+        console.log('functions are very fun!');
+    }
+};
+let jsonstring =JSON.stringify(person);
+console.log(JSON.parse(jsonstring));
+
+
+/*let person = {
+    name: "John",
+    age1: 30,
+    age2: 25,
+    city: "New York",
+    //ages: function() {
+        //console.log(person.age1 + person.age2);
+};
+console.log(person);
+//person.ages();
+delete person.age1;
+console.log(person);
+//person.hobbies = ["reading", "traveling", "cooking"];
+person.lastName = 'paul';
+console.log(person);*/
+/*let age = prompt('What is your age?');
+let name = prompt('What is your name?');
+let person = {
+    ages : 0,
+    names : ''
+}
+if (age ){
+    person.ages = age;
+}else if(name){
+    person.names = name;
+
+}
+alert(`Your name is ${person.names} and your age is ${person.ages}`);
+*/
+</script>
+</body>
+</html>
