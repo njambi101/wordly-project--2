@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Coin Flip</title>
+</head>
+
+<body>
+    <button onclick="playGame('heads')">heads</button>
+    <button onclick="playGame('tails')">tails</button>
+    <button onclick="
+    localStorage.removeItem('moves');
+    moves.wins = 0;
+    moves.losses = 0;
+    ">Reset</button>
+    <script>
+    let moves = JSON.parse(localStorage.getItem('moves')) || {
+         wins: 0,
+         losses: 0
+    };
+    /*if (!moves) {
+        moves = {
+            wins: 0,
+            losses: 0
+        };
+    }
+    */
+    /* {
+        wins: 0,
+        losses: 0
+       }
+       */
+        // console.log(JSON.parse(localStorage.getItem('moves')));
+        // let result;
+        
+        function playGame(guess){
+           const computerMove = computerguese();
+            let result;
+            if (guess === 'heads'){
+                if(computerMove === 'heads'){
+                    result = 'You win!';
+                }else if(computerMove === 'tails'){
+                    result = 'You lose!';
+                }
+            }else if(guess === 'tails'){
+                if(computerMove === 'tails'){
+                    result = 'You win!';
+                }else if(computerMove === 'heads'){
+                    result = 'You lose!';
+                }
+                
+            }
+
+            if (result === 'You win!') {
+                moves.wins++;
+            } else if (result === 'You lose!') {
+                moves.losses++;
+            }
+           
+
+             alert(`The computer guessed ${computerMove}. ${result}
+Wins: ${moves.wins}, Losses: ${moves.losses}`);
+             
+                localStorage.setItem('moves', JSON.stringify(moves));
+            //alert(`The computer guessed ${computerMove}. ${result}`);
+        }
+        //console.log(moves);
+        function computerguese() {
+            const randomNumber = Math.random();
+            let computerMove = '';
+
+            if (randomNumber < 0.5) {
+                computerMove = 'heads';
+            } else {
+                computerMove = 'tails';
+            }
+            return computerMove;
+        }
+        
+
+        /*const guess = 'heads';
+
+        if (guess === result) {
+            console.log('You win!');
+        } else {
+            console.log('You lose!');
+        }
+        */
+
+    </script>
+</body>
+
+</html>

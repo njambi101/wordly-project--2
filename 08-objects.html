@@ -8,17 +8,62 @@
 <body>
 <script>
     // JavaScript code for objects
+let product1 ={
+    name: 'basketball',
+    price : 2095
+}    
+let product2 ={
+    name : 'tennis ball',
+    price: 7000
 
-person = {
+}
+function comparePrice(){
+    if (product1.price < product2.price){
+        console.log(product1)
+    }else if (product1.price > product2.price){
+        console.log(product2)
+    }
+}
+comparePrice();
+
+const names = 'WOW YOU ARE AMAZING';
+console.log(names.toLocaleLowerCase());
+
+const text = "numds";
+const repeatedText = text.repeat(5.6); // Result: "abcabcabc"
+console.log(repeatedText);
+
+let bro = 'njambi';
+bro = bro.toUpperCase();
+
+console.log(bro.repeat(5));
+/*product.price =2595;
+console.log(product)
+product['delivery-time'] = '3days';
+console.log(product);
+*/
+/*person = {
     name: "John",
     age: 30,
     city: "New York",
-    fun: function(){
+    /*fun: function(){
         console.log('functions are very fun!');
     }
+        */
+    /*fun (){
+        console.log('functions are very fun!');
+    },
+    account(){
+        console.log(300 + 200 );
+    }
 };
-let jsonstring =JSON.stringify(person);
-console.log(JSON.parse(jsonstring));
+person.account();
+
+*/
+//person.fun();
+
+// let jsonstring =JSON.stringify(person);
+// console.log(JSON.parse(jsonstring));
 
 
 /*let person = {
