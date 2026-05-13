@@ -5,9 +5,14 @@
     </head>
     <body>
         <p>please enter your email address:</p>
-        <input type="email" id="emailInput" placeholder="Enter your email">
-        <button>myemail</button>
+       
+        <button onclick="
+        console.log(emails);
+        ">getemail</button>
         <script>
+            let email = prompt('Please enter your email address:');
+            let emails = JSON.parse(localStorage.getItem('email'));
+            localStorage.setItem('email', JSON.stringify(email));
             // Email project JavaScript code goes here
         </script>
     </body>
