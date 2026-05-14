@@ -18,18 +18,42 @@
     <button onclick="
       playGame('scissors');
     ">Scissors</button>
+    
+    <p class="js-result"></p>
+
+    <p class="js-moves"></p>
+
+    <p class="js-scores"></p>
+
 
     <button onclick="
     score.wins = 0,
     score.losses = 0,
     score.ties = 0
+    localStorage.removeItem('score');
+    buttons();
     ">Reset scores</button>
 
     <script>
-        let score = JSON.parse(localStorage.getItem('score'));
+        let score = JSON.parse(localStorage.getItem('score')) || {
+            wins: 0,
+            losses: 0,
+            ties: 0
+        };
 
+      /*  document.querySelector('.js-scores')
+        .innerHTML = `wins: ${score.wins}, losses: ${score.losses}, ties: ${score.ties}`
+        */
+       buttons();
         //console.log(JSON.parse(localStorage.getItem('score')));
-
+        /*if (!score) {
+            score = {
+                wins: 0,
+                losses: 0,
+                ties: 0
+            };
+        }
+            */
         function playGame(playerMove) {
             const computerMove = pickComputerMove();
 
@@ -72,9 +96,24 @@
             }
 
          localStorage.setItem('score',JSON.stringify(score));
+         document.querySelector('.js-result').innerHTML = result;
 
-            alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
+         document.querySelector('.js-moves').innerHTML =`you ${playerMove} - ${computerMove} computer`;
+
+         buttons();
+        }
+            /*document.querySelector('.js-scores')
+                .innerHTML = `wins: ${score.wins}, losses: ${score.losses}, ties: ${score.ties}`
+*/
+
+            /*alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
  wins: ${score.wins}, losses: ${score.losses}, ties: ${score.ties}`);
+        
+*/
+        function buttons(){
+            
+            document.querySelector('.js-scores')
+                .innerHTML = `wins: ${score.wins}, losses: ${score.losses}, ties: ${score.ties}`;
         }
 
         function pickComputerMove() {

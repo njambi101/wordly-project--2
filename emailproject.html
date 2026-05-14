@@ -4,16 +4,28 @@
         <title>Email Project</title>
     </head>
     <body>
-        <p>please enter your email address:</p>
-       
-        <button onclick="
-        console.log(emails);
-        ">getemail</button>
+        <p >Youtube Subscribe Button</p>
+           <button class="js-suscribe" onclick="
+         subscribe();
+          // console.log(buttonElement);
+           ">subscribe</button>
+       <p>please enter your email address:</p>
+       <input>
         <script>
-            let email = prompt('Please enter your email address:');
+            function subscribe(){
+                const buttonElement = document.querySelector('.js-suscribe');
+
+                if (buttonElement.innerHTML === 'subscribe') {
+                    buttonElement.innerHTML = 'subscribed';
+                } else {
+                    buttonElement.innerHTML = 'subscribe';
+                }
+            }
+            /*let email = prompt('Please enter your email address:');
             let emails = JSON.parse(localStorage.getItem('email'));
             localStorage.setItem('email', JSON.stringify(email));
-            // Email project JavaScript code goes here
+            */
+           // Email project JavaScript code goes here
         </script>
     </body>
 </html>
