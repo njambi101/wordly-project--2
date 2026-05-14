@@ -9,11 +9,43 @@
          subscribe();
           // console.log(buttonElement);
            ">subscribe</button>
-       <p>please enter your email address:</p>
-       <input>
+       <p class="js-display" ></p>
+       <input class="js-inputs" placeholder="enter your email here">
+       <button class="js-submit" onclick="
+       retrieved();
+       ">submit</button>
+       <p>Enter your name</p>
+       <input type="text" class="js-name">
+       <button class="js-names" onclick="
+       youName();
+       ">submit</button>
+       <p class="js-yourNames"></p>
         <script>
+            /*let email = document.querySelector('.js-inputs');
+            let submiElement = document.querySelector('.js-submit');
+            let displays = document.querySelector('.js-display');
+
+            if(submiElement.innerHTML === 'submit'){
+                displays.innerHTML = email;
+            }
+            */ 
+           function youName(){
+            let name = document.querySelector('.js-name')
+            let other = name.value;
+            //console.log(other)
+            document.querySelector('.js-yourNames').innerHTML = other;
+           }
+              
+         function retrieved(){
+             let email = document.querySelector('.js-inputs');
+             let emails = email.value;
+             document.querySelector('.js-display').innerHTML = emails;
+         }
+              // let button =  document.querySelector('.js-submit');
+
+               
             function subscribe(){
-                const buttonElement = document.querySelector('.js-suscribe');
+                let buttonElement = document.querySelector('.js-suscribe');
 
                 if (buttonElement.innerHTML === 'subscribe') {
                     buttonElement.innerHTML = 'subscribed';
