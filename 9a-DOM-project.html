@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+</head>
+
+<body>
+    <button class="js-button" onclick="
+        games('heads')
+        ">heads</button>
+    <button class="js-buttons" onclick="
+        games('tails')">tails</button>
+    <p class="js-paragraph"></p>
+
+    <input type="text" class="js-inputs" onkeydown="
+     keydowns(event)
+    " >
+    <button class="js-submit" onclick="
+    displayname()
+    ">Submit</button>
+    <p class="js-words" ></p>
+
+    <script>
+       function keydowns(event){
+         if (event.key === 'Enter') {
+               displayname()
+           }
+       }
+
+        function displayname(){
+            let displays = document.querySelector('.js-inputs')
+            let gets = displays.value;
+           // console.log(gets)
+           document.querySelector('.js-words').innerHTML = gets;
+        }
+
+
+        /*function games(game){
+        const button =document.querySelector('.js-button');
+        const buttons =document.querySelector('.js-buttons');
+        let para = document.querySelector('.js-paragraph');
+
+        if(game === 'heads'){
+            para.innerHTML = `you chose: heads`
+        }else if(game === 'tails'){
+            para.innerHTML = 'you chose: tails'
+        }
+        
+
+    }  
+*/
+        // console.log(button)
+    </script>
+</body>
+
+</html>
