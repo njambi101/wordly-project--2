@@ -3,21 +3,44 @@
 
 <head>
     <title>Rock Paper Scissors</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-size: large;
+            font-weight: bold;
+            
+        }
+        .images-icon{
+            height: 50px;
+            border: solid;
+            border-color: white;
+            border-radius: 25px;
+            
+        }
+        .images{
+            background-color: black;
+            border-color: white;
+            border: solid;          
+            border-radius: 20px;
+            padding: 10px 10px;
+        }
+    </style>
 </head>
 
 <body>
     <p>Rock Paper Scissors</p>
     <button onclick="
       playGame('rock');
-    ">Rock</button>
+    " class="images"><img src="images/rock-image.png" class="images-icon"></button>
 
     <button onclick="
       playGame('paper');
-    ">Paper</button>
+    " class="images"><img src="images/paper-image.jpg" class="images-icon"></button>
 
     <button onclick="
       playGame('scissors');
-    ">Scissors</button>
+    " class="images"><img src="images/scissors-image.jpg" class="images-icon"></button>
     
     <p class="js-result"></p>
 
