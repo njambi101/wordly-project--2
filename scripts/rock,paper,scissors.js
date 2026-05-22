@@ -24,4 +24,20 @@ for(let i = 0;  i < number.length; i++){
     nums.push(foo *2)
     }
  console.log(nums)  
- console.log(nos) 
+ 
+ const text = "abc";
+const repeated = text.repeat(3); // "abcabcabc"
+console.log(repeated)
+
+
+const repeatString = function(word,num) {
+    if(num > 0){
+        let repeates = word.repeat(num);
+        console.log(repeates) 
+
+    }else{
+        console.log('error')
+    }
+};
+
+ repeatString('njambi', 6)
