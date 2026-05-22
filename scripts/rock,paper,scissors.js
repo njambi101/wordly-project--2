@@ -1,3 +1,19 @@
+let number = [10,20,30];
+number[2] = 99;
+console.log(number)
+
+function getLastValue(array){
+    for(let i = 0; i < array.length; i--){
+        
+    }
+}
+
+
+
+
+
+
+
 /*let i = 1;
 while (i <= 10) {
     
@@ -9,7 +25,7 @@ while (i <= 10) {
 for( let i = 1; i <= 15; i++){
     console.log(i)
 }
-*/
+
 const number = [
     1,2,3,4,5,6
 ]
@@ -17,6 +33,7 @@ const number = [
 let nos = 0;
 
 let nums =[];
+*/
 
 /*for(let i = 0;  i < number.length; i++){
     let foo = number[i];
@@ -24,7 +41,7 @@ let nums =[];
     nums.push(foo *2)
     }
  console.log(nums)  
- */
+ 
 const repeatString = function (word, times) {
   if (times < 0) return "ERROR";
   let string = "";
@@ -51,6 +68,7 @@ for(let i = 2; i <= 20; i++){
     console.log(i)
     
 }
+    */ 
 /*const repeatString = function(word,num) {
    for(let i = 0; i < num; i++){
     

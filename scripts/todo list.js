@@ -1,4 +1,4 @@
-let words =['good work', 'lets play'];  
+let words =[];  
 
  getaction();
 
