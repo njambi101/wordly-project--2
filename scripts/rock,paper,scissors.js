@@ -47,7 +47,10 @@ for (let i = 0; i < 7; i++){
 }
 
 
-
+for(let i = 2; i <= 20; i++){
+    console.log(i)
+    
+}
 /*const repeatString = function(word,num) {
    for(let i = 0; i < num; i++){
     
