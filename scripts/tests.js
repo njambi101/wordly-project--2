@@ -72,5 +72,29 @@ function resipe(h){
         return 'just add some salt'
     
 }
-let r = resipe('rice');
-console.log(r)
+ resipe('rice');
+// the example below is an arrow function.
+ const ns =  (n, l) =>  n * l;
+
+ let v = ns(2, 5);
+ console.log(v)
+
+ // assinging an array to a function.
+ function number(x, ...y){
+    console.log(x , y)
+ }
+ number(1,2,3,4,5,6,7,8,9)
+
+ function foo(boo){
+    boo();
+ }
+ foo(function boo (){
+    console.log('go away')
+ })
+const uu = 3;
+const yr = 7;
+ const jay = (a,b) => {
+    return 2*(a + b);
+ }
+ let hk = jay(uu, yr);
+ console.log(hk)
