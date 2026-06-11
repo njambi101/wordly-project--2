@@ -98,3 +98,21 @@ const yr = 7;
  }
  let hk = jay(uu, yr);
  console.log(hk)
+
+ const my = (a, h=9) => {
+    if (a > 100){
+        return a + h;
+    }
+ }
+
+
+ 
+ console.log(my(102,99))
+
+ function i(){
+    let name = 'grace';
+    return name
+ }
+
+ console.log(i());
+ console.log(name);
