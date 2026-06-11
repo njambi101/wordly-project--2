@@ -22,8 +22,11 @@ function a(){
 let d = a();
 console.log(d)
 document.querySelector('.js-display').innerHTML = a();
-*/
+
  //let num =document.querySelector('.js-names')
+
+const { default: string } = require("figlet/fonts/babyface-lame");
+
     //let n = num.value;
 function age(){
    let num = document.querySelector('.js-names');
@@ -116,3 +119,13 @@ const yr = 7;
 
  console.log(i());
  console.log(name);
+ */
+ 
+ let no = 10;
+ function numbers(food){
+  food();
+ }
+numbers(function food(){
+    console.log( "welcom all");
+})
+
