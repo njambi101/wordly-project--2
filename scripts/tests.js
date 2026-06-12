@@ -129,3 +129,25 @@ numbers(function food(){
     console.log( "welcom all");
 })
 
+let x = 5;
+let y = 3;
+console.log(x | y);
+console.log(y)
+
+
+const number = 20;
+const number2 = 40;
+let nos =Math.floor( Math.random()* 9) ;
+
+if(nos <= 10){
+    console.log('good work you have found it.')
+}
+console.log(nos)
+
+const max = 100;
+const min = 10;
+
+let random1 = Math.random() * (max - min) + min;
+console.log(random1);
+
+
