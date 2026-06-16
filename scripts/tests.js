@@ -120,7 +120,7 @@ const yr = 7;
  console.log(i());
  console.log(name);
  */
- 
+ /*
  let no = 10;
  function numbers(food){
   food();
@@ -150,4 +150,132 @@ const min = 10;
 let random1 = Math.random() * (max - min) + min;
 console.log(random1);
 
+*/
+const fortune1 ="Your cat will look very cuddly today.";
+const fortune2 = "The weather will be nice tomorrow.";
+const fortune3 = "Be cautious of your new neighbors.";
+const fortune4 = "You will find a new hobby soon.";
+const fortune5 = "It would be wise to avoid the color red today.";
+let selectedFortune = '';
+let randomNumber = Math.floor( Math.random() * 6) + 1;
+
+if (randomNumber === 1){
+    selectedFortune = fortune1;
+} else if (randomNumber === 2){
+    selectedFortune = fortune2;
+} else if(randomNumber === 3){
+    selectedFortune = fortune3;
+} else if(randomNumber === 4){
+    selectedFortune = fortune4;
+} else if(randomNumber === 5){
+    selectedFortune = fortune5;
+}
+console.log(selectedFortune)
+//console.log(randomNumber);
+/*
+let name = 2;
+switch(name){
+    case 1:
+        console.log("welcome! day 1")
+        break;
+    case 2:
+        console.log("welcom back day 2")
+        break;
+    case 3:
+        console.log('okay bye')
+        break;  
+    default:
+        console.log("that is not a legit input")              
+}
+  */ 
+ /*     
+let name = {fname: "john",
+    sname: "dhoe"
+}
+function boowhoo(a){
+    if (a === true){
+        console.log(true)
+    } else if(a === false){
+        console.log(true)
+    } else if(Array.isArray(a)){
+        console.log(false)
+    } else if(a === [].slice){
+        console.log('right')
+    } else if(typeof(a)){
+        console.log('we have found it')
+    }
+}
+
+boowhoo(name)
+*/
+/*
+//slice method
+const y = 'johndoe@gmail.com';
+let s = y.slice( 8, 17 )
+console.log(s)
+
+//repeat method
+ 
+let a = y.repeat(3)
+console.log(a)
+
+//indexof method 
+let f = y.indexOf("@");
+console.log(f);
+
+// replace method 
+let m = " why is your bag so big";
+let g = m.replace("bag", " dog")
+let t = m.replace(/bag/gi, "birds")
+console.log(g)
+console.log(t)
+ 
+*/
+
+const email = "johndoe@gmail.com";
+const domainIndex = email.indexOf('@');
+console.log(domainIndex);
+const username = email.slice(0, domainIndex);
+console.log(username);
+const masked = username[0] + "*".repeat(username.longth - 1) + email.slice(domainIndex);
+console.log(masked);
+
+/*let email ='';
+function maskEmail(name){
+    
+}
+*/
+
+
+const y = 'johndoe@gmail.com';
+
+let p = y.replace("ohndoe", "******");
+
+let em = y.split('@')
+console.log(em)
+
+function maskEmail(email) {
+  // Validate input existence and ensure it contains an @ symbol
+  if (!email || !email.includes('@')) {
+    return 'Invalid email';
+  }
+
+  // Split the email into username and domain parts
+  const [username, domain] = email.split('@');
+  
+  // If username is extremely short (1-2 characters), mask it dynamically
+  if (username.length <= 2) {
+    return '*'.repeat(username.length) + '@' + domain;
+  }
+
+  // Keep first and last char, replace the rest with asterisks matching original length
+  const firstChar = username[0];
+  const lastChar = username[username.length - 1];
+  const maskedLength = username.length - 2;
+  const asterisks = '*'.repeat(maskedLength);
+
+  return `${firstChar}${asterisks}${lastChar}@${domain}`;
+}
+
+console.log(maskEmail(y))
 
