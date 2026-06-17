@@ -231,7 +231,7 @@ console.log(g)
 console.log(t)
  
 */
-
+/*
 const email = "johndoe@gmail.com";
 const domainIndex = email.indexOf('@');
 console.log(domainIndex);
@@ -246,7 +246,7 @@ function maskEmail(name){
 }
 */
 
-
+/*
 const y = 'johndoe@gmail.com';
 
 let p = y.replace("ohndoe", "******");
@@ -279,3 +279,21 @@ function maskEmail(email) {
 
 console.log(maskEmail(y))
 
+*/
+
+/*let name ="example@gmail.com";
+let email = name.split('@');
+console.log(email);
+let splite = email[1];
+let email2 = email[0];
+console.log(email2.replace(email2, "******") + splite);
+*/
+let email1 = prompt('please enter your email:')
+function changeEmail(name){
+    let Email = name.split('@');
+
+    console.log(email1.indexOf("gmail"))
+    console.log(Email);
+}
+
+changeEmail(email1)
