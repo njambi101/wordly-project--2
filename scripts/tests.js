@@ -288,12 +288,121 @@ let splite = email[1];
 let email2 = email[0];
 console.log(email2.replace(email2, "******") + splite);
 */
-let email1 = prompt('please enter your email:')
+/*let email1 = prompt('please enter your email:')
 function changeEmail(name){
     let Email = name.split('@');
-
+    let index = Email[0];
+    let emm = Email[1];
+    let rep = index.replace(index, '********') + emm;
     console.log(email1.indexOf("gmail"))
     console.log(Email);
+    console.log(index);
+    console.log(rep);
+    //console.log(emm);
 }
 
 changeEmail(email1)
+*/
+/*const email = "myExample@gmail.com";
+const maskEmail = (email) =>{
+    let email1 = email.split('@');
+    let indof = email[0];
+    let indfo = email[1];
+    let firstchar = indof[0];
+    let lastchar = indof[indof.length - 1];
+    let maskedlength = indof.length - 2;
+    let star =firstchar + '*'.repeat(maskedEmail > 0) + indfo + email1[1];
+
+    console.log(email1);
+    //console.log(indof);
+    console.log(star)
+
+    
+}
+maskEmail(email)
+*/
+/*
+let name ="grace";
+let j = "p".repeat(name.length);
+console.log(j)
+
+const text = "Hello, world!";
+
+console.log(text.indexOf("l"));
+
+let name ="garce";
+//console.log(name.indexOf('g'))
+let imj = name.indexOf('g');
+console.log(imj);
+
+
+
+const email ="myExample@gmail.com";
+
+const maskEmail = (emails) =>{
+    let email1 = emails.split("@");
+    let indof = emails[0];
+    let indfo = emails[8]
+    let star =indof + '*'.repeat(email1[0].length) +indfo + email1[1];
+   
+    return star;    
+}
+console.log(maskEmail(email));
+*/
+/*
+const email = "myExample@gmail.com"; 
+
+const maskEmail = (emails) => {
+    let emailParts = emails.split('@'); 
+    let username = emailParts[0];
+    let domain = emailParts[1];
+
+    let firstChar = username[0];
+    let lastChar = username[username.length - 1];
+
+    // Calculate asterisks needed (Total length - first and last characters)
+    let maskedLength = username.length - 2;
+    let star = firstChar + '*'.repeat(maskedLength > 0 ? maskedLength : 0) + lastChar;
+
+    return star + '@' + domain;
+} 
+
+console.log(maskEmail(email)); 
+// Output: m*******e@gmail.com
+*/
+const nj = "njambigrace@gmail.com";
+const names = ( emeil) => {
+    let splited = emeil.split('@');
+   // console.log( splited);
+    let userName = splited[0];
+    let domian = splited[1];
+    //console.log(userName);
+    let fistLetter = userName[0];
+    let lastLetter =userName[ userName.length - 1];
+    //console.log(lastLetter)
+    //console.log(fistLetter)
+    let stracture = "*".repeat(userName.length - 2);
+    return fistLetter + stracture + lastLetter + domian;
+}
+console.log(names(nj));
+/*
+const maskEmail = (email) => {
+    let emailParts = email.split('@'); 
+    let username = emailParts[0];
+    let domain = emailParts[1];
+
+    let firstChar = username[0];
+    let lastChar = username[username.length - 1];
+
+   
+    let maskedLength = username.length - 2;
+    let star = firstChar + '*'.repeat(maskedLength > 0 ? maskedLength : 0) + lastChar;
+
+    return star + '@' + domain;
+} 
+
+let email = "njambi@gmail.com"; 
+console.log(maskEmail(email));
+
+ 
+*/
